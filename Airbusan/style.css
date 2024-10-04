@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+ }
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li{list-style: none;}
+
+a{text-decoration:none; color: inherit;}
+
+header{
+  width:100%;
+}
+
+.guide{
+  width:100%;
+  background-color:#2A3692;
+  height:47px;
+}
+.layout-header{
+  width:1200px;
+  height:100%;
+  margin:0 auto;
+  padding:0 20px;
+  display: flex;
+  gap:10px;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.guide .layout-header p:nth-of-type(1){
+  font-size:14px;
+}
+.guide .layout-header p:nth-of-type(2){
+  font-size:12px;
+}
+
+nav .logo img{
+  width:103px;
+  height:32px;
+}
+
+.layout-menu{
+  width:100%;
+  border-bottom:1px solid #c0c0c0;
+  position:relative;
+}
+
+.layout-menu nav{
+  width:1200px;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: relative;
+}
+
+.layout-menu nav .menubar{
+  display: flex;
+  width:860px;
+  height:80px;
+  justify-content: space-between;
+  align-items: center;
+  color: #202020;
+  font-family: 'NanumBarunGothic';
+}
+
+.layout-menu nav .menubar>li{
+  width:172px;
+  height:80px;
+  line-height:80px;
+  text-align: center;
+  position: relative;
+}
+
+.sub{
+  transition:max-height .5s;
+  max-height:0px;
+  overflow: hidden;
+  font-family: 'NanumBarunGothic';
+}
+
+.sub>li{
+  width:100%;
+  line-height:40px;
+  color: #888;
+}
+
+.sub>li:nth-child(1){
+  padding-top:10px;
+}
+
+.header-util {
+  display: flex;
+  width:172px;
+  justify-content: space-around;
+  color:#202020;
+  font-family: 'NanumBarunGothic';
+}
+
+.header-util li a{
+  display: block;
+  width:70px;
+  text-align: center;
+  padding:3px 0;
+  background-color: rgba(240,240,240);
+  border-radius:5px;
+}
+
+.sub a:hover{
+  color:#303030;
+}
+
+/*서브의 배경*/
+.layout-menu .subBg{
+  position:absolute;
+  left:0;
+  top:100%;
+  width:100%;
+  height:0px;
+  border-top:1px solid #c0c0c0;
+  background-color:#ffffff;
+  transition:height .5s;
+}
+
+.banner{
+  width:100%;
+}
+
+.banner .banner-img-box img{
+  display: block;
+  width:100%;
+  margin: 0 auto;
+}
+
+.banner .hr-line{
+  width:100%;
+  height:20px;
+  background-color: #161C4E;
+}

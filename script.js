@@ -1,0 +1,1 @@
+alert('script파일 적용 완료')
