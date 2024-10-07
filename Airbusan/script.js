@@ -21,6 +21,7 @@ addEventListener("load", () => {
     for(const sub of subs){
       sub.style.maxHeight = sub.scrollHeight + "px";
     }
-    subBg.style.height = "200px";
+    subBg.style.height = "180px";
   }
 });
+
