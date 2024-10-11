@@ -23,6 +23,7 @@
 ul, li{list-style: none;}
 
 a{text-decoration:none; color: inherit;}
+button { background:transparent; border:0; outline:none; }
 
 header{
   width:100%;
@@ -230,7 +231,7 @@ nav .logo img{
   width:1200px;
   height:200px;
   background-color:#fff;
-  border-radius:0px 10px 10px 10px;
+  border-radius:8px;
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
   top:0%;
@@ -243,6 +244,7 @@ nav .logo img{
   width:100%;
   display: flex;
   gap:10px;
+  margin-bottom: 8px;
 }
 
 .serch-bar{
@@ -254,14 +256,37 @@ nav .logo img{
 }
 
 .airserch .serch-btn button{
-  width:61px;
-  height:30px;
+  width:100px;
+  height:35px;
   background-color: transparent;
-  border:1px solid #161C4E;
-  font-size:16px;
-  border-radius:8px;
+  border-bottom:2px solid #f2f2f2;
+  color:#666;
+  font-size:17px;
   margin:20px 0;
+  margin-right:20px;
   cursor: pointer;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: bold;
+  position: relative;
+  transition: all .6s;
+}
+
+.airserch .serch-btn button:hover{
+  font-size:20px;
+  border-bottom: 1px solid #999;
+  color:#222;
+}
+
+.serch-btn button::after{
+  content:"\f0d7";
+  font-size:20px;
+  display: inline-block;
+  font-family: "Font Awesome 6 Free";
+  position:absolute;
+  left: 80%;
+  top:15%;
+
 }
 
 .serch-bar button.serch-tem1{
@@ -274,6 +299,10 @@ nav .logo img{
   background-color: transparent;
   border-radius:5px;
   font-size:15px;
+}
+
+.serch-bar b{
+  letter-spacing:0.8px;
 }
 
 .serch-bar button.serch-tem2{
@@ -299,3 +328,157 @@ nav .logo img{
   font-size:15px;
   color: #fff;
 }
+
+.addition-box{
+  width:1200px;
+  margin:50px auto;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.addition-box span h2{
+  font-size: 40px;
+  color: #282828;
+  margin-bottom:20px;
+}
+
+.addition-box .addition-icon{
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  margin-top:50px;
+}
+
+.addition-icon li{
+  background-color: #f7f7f7;
+  width:130px;
+  height:130px;
+  text-align: center;
+  line-height:130px;
+  border-radius:50%;
+  cursor: pointer;
+  transition: all .6s;
+  color: #282828;
+}
+
+.addition-icon li p {
+  font-size:17px;
+  margin-top:-30px;
+  letter-spacing: 1px;
+  color: #282828;
+}
+
+.addition-icon li:hover{
+  font-size:60px;
+  background-color: #eeeeee;
+}
+
+.slide-box {
+  width:1200px;
+  margin:0 auto;
+  margin-top:200px;
+  position: relative;
+}
+
+.slide-box span{
+  font-size: 38px;
+  font-family: 'S-CoreDream-3Light';
+  color: #282828;
+  position: relative;
+}
+
+.slide-box span::before{
+  content: "";
+  display: block;
+  width:104px;
+  height:15px;
+  background-color:#B0EAFF;
+  position: absolute;
+  z-index: -1;
+  bottom:5px;
+  left:2px;
+}
+
+.slide-box span::after{
+  content: "";
+  display: block;
+  width:135px;
+  height:50px;
+  background-image:url(img/beforeletbox.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right:-140px;
+  top:-20px;
+}
+
+.slide-menu{
+  width:100%;
+  display: flex;
+  margin-top:50px;
+  justify-content: space-between;
+}
+
+.slide-menu li img{
+  width:271px;
+  height:auto;
+  transition: all .6s;
+}
+
+.slide-menu .slide-let-box{
+  width:100%;
+  margin-top:15px;
+  line-height:1.5;
+}
+
+.slide-let-box li p{
+  color:#464646;
+  letter-spacing:1px;
+  font-size:15px;
+}
+
+.slide-let-box li b{
+  font-size:19px;
+}
+.slide-let-box li:nth-child(3){
+  font-size:19px;
+  margin-bottom:5px;
+}
+#krw{
+  font-size:12px;
+  margin-right:10px;
+}
+
+.slide-let-box li:first-child{
+  margin-bottom:5px;
+}
+
+
+
+.slide-btn-box button:first-child{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:-30px;
+  cursor: pointer;
+}
+
+.slide-btn-box button:last-child{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:-30px;
+  cursor: pointer;
+}
+
+.slide-menu li a {
+  width:271px;
+  height:360px;
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  display:block;
+}
+.slide-menu li a:hover img {
+  /* width:290px; */
+  transform:scale(1.1);
+}
+
