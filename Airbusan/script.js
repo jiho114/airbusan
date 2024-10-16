@@ -79,16 +79,8 @@ document.querySelector('#prev').addEventListener('click', ()=>{
   //선언
   let subSlideBox = document.querySelector('.tapslide>ul')
   let subSlideLi = document.querySelectorAll('.tapslide>ul>li')
-  // let subShow = 2;
-  // let subTotal = subSlideLi.length;
   let subSlideWidth = subSlideLi[0].offsetWidth;
   let bullets = document.querySelectorAll('.bullets>li')
-
-//슬라이드 복제
-  // for(let i = 0; i < subShow; i++){
-  //   const copyobj = subSlideLi[i].cloneNode(true)
-  //   subSlideBox.appendChild(copyobj)
-  // }
 
 // next 버튼 활성화
 let subNum = 0;
@@ -119,9 +111,7 @@ document.querySelector('#subslidetap-left').addEventListener('click', ()=>{
   
   for(let i = 0; i < bullets.length; i++){
     bullets[i].classList.remove('on')
-    // console.log(bullets[i])
   } 
-  
-  bullets[subNum].classList.add('on')
+    bullets[subNum].classList.add('on')
 })
 
