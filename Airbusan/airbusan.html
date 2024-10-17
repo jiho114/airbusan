@@ -87,31 +87,85 @@
   <div class="banner">
   <a href="#">
     <div class="banner-img-box">
-      <img src="img/gara.jpg" alt="">
+      <img src="img/banner1.png" alt="">
     </div>
   </a>
-  <div class="banner-pagenav">
-    <ul class="page-nav">
-      <li class="on"></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
   <div class="hr-line">
   </div>
-  </div>
-  <div class="layout-serch">
+</div>
+<div class="layout-serch">
+    <div class="banner-pagenav">
+      <ul class="page-nav">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   <div class="airserch">
     <ul class="serch-btn">
-      <li><button>왕복</button></li>
-      <li><button>1 승객</button></li>
+      <li><button id="airselect" class="airselect1">왕복</button>
+      <ul class="interval">
+        <li>편도</li>
+      </ul>
+      </li>
+      <li><button id="airselect" class="airselect2">승객</button>
+        <div class="passengers-popup">
+          <div class="pspopup-let">
+            <span>탑승객 선택</span>
+            <button class="close-btn"><i class="fa-regular fa-circle-xmark"></i></button>
+          </div>
+          <div class="pspopup-select">
+           <div class="stepper">
+            <p>성인</p>
+            <div class="ps-sel">
+            <button><i class="fa-solid fa-minus"></i></button>
+            <input type="text" value="1">
+            <button><i class="fa-solid fa-plus"></i></button>
+          </div>
+           </div>
+           <div class="stepper">
+            <p>소아</p>
+            <div class="ps-sel">
+            <button><i class="fa-solid fa-minus"></i></button>
+            <input type="text" value="0">
+            <button><i class="fa-solid fa-plus"></i></button>
+           </div>
+          </div>
+           <div class="stepper">
+            <p>유아</p>
+            <div class="ps-sel">
+            <button><i class="fa-solid fa-minus"></i></button>
+            <input type="text" value="0">
+            <button><i class="fa-solid fa-plus"></i></button>
+           </div>
+          </div>
+          </div>
+          <div class="psnotice-box">
+            <span>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                탑승객은 성인,소아 총 9명까지 선택 할 수 있습니다. 9명 초과 시 고객센터로 문의하시기 바랍니다.</p>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                만 2세 미만 유아의 경우 단독 예약이 불가 하며 좌석 제공이 되지 않습니다. 성인을 반드시 포함하여 예약해주십시오.</p>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                탑승 수속 시 생년월일 확인 가능한 서류 지참이 필수입니다.</p>
+            </span>
+          </div>
+          <div class="pas-last-btn">
+            <button>적용</button>
+          </div>
+        </div>
+      </li>
     </ul>
     <ul class="serch-bar">
-      <li><button class="serch-tem1"><b>출발지</b> <br> 출발지</button></li>
-      <li><button class="serch-tem1"><b>도착지</b> <br> 도착지</button></li>
-      <li><button class="serch-tem2"><b>출발일</b> <br> <b>2024/09/30</b></button></li>
-      <li><button class="serch-tem2"><b>도착일</b> <br> <b>2024/09/30</b></button></li>
+      <li><button class="serch-tem1"><b>출발지</b></button></li>
+      <li class="serch-img-icon"><img src="img/icon1.png" alt=""></li>
+      <li><button class="serch-tem1"><b>도착지</b></button></li>
+      <li><button class="serch-tem2 month-icon1"><b>출발일</b></button></li>
+      <li><button class="serch-tem2 month-icon2"><b>도착일</b></button></li>
       <li><button class="serch-solo">항공편 검색</button></li>
     </ul>
   </div>
