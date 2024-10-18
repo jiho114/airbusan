@@ -271,7 +271,7 @@ nav .logo img{
   cursor: pointer;
 }
 
-.airserch .serch-btn  #airselect{
+.airserch .serch-btn  .airselect{
   width:100px;
   height:35px;
   background-color: transparent;
@@ -288,7 +288,7 @@ nav .logo img{
   transition: all .3s;
 }
 
-.airserch .serch-btn  #airselect.on{
+.airserch .serch-btn  .airselect.on{
   border-bottom: 1px solid #999;
   color:#222;
 }
@@ -309,13 +309,27 @@ nav .logo img{
   color: #666;
   font-size: 17px;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.03);
-  transition: height 0.2s ease; /* 높이의 변화를 부드럽게 */
+  background-color:white;
+  transition: height 0.2s ease;
+  /* 높이의 변화를 부드럽게 */
 } 
+
+.interval.check::after{
+  content:"\f00c";
+  font-family:"Font Awesome 6 Free";
+  width: 17px;
+  height:17px;
+  text-align: center;
+  position: absolute;
+  top:5px;
+  left:80px;
+  font-size:14px;
+}
 
 .serch-btn li .interval:hover{
   color: #2A3692;
 }
+
 
 .passengers-popup{
   display: none;
@@ -404,7 +418,7 @@ nav .logo img{
 }
 
 
-.serch-btn #airselect::after{
+.serch-btn .airselect::after{
   content:"\f0d7";
   font-size:20px;
   display: inline-block;

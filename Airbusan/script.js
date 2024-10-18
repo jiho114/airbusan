@@ -37,21 +37,27 @@ function slide(){
 setInterval(slide, 5500);
 
  let intervalBtn = document.querySelector('.serch-btn>li>button')
+ let interval = document.querySelector('.interval');
 
  intervalBtn.addEventListener('click', () => {
-  let interval = document.querySelector('.interval');
-  let currentHeight = window.getComputedStyle(interval).height; // 현재 height 가져오기
-  
+  let currentHeight = window.getComputedStyle(interval).height; // 현재 height 가져오기  
   intervalBtn.classList.remove('on')
   if (currentHeight === '0px') {
     interval.style.height = '30px'; // 원하는 높이로 설정
     intervalBtn.classList.add('on')
   } else {
     interval.style.height = '0px';  // 다시 0으로 줄이기
-
   }
-  
 });
+
+interval.addEventListener('mouseenter', ()=>{
+  interval.classList.add('check')
+})
+interval.addEventListener('mouseleave', ()=>{
+  interval.classList.remove('check')
+})
+
+
 
 let mainTapSlide = document.querySelector('.slide-menu')
 let mainTapSlideLi = document.querySelectorAll('.slide-menu>li')
@@ -132,14 +138,19 @@ document.querySelector('#subslidetap-left').addEventListener('click', ()=>{
     bullets[subNum].classList.add('on')
 })
 
-document.querySelector('.airselect2').addEventListener('click',()=>{
+let personSel = document.querySelector('#airselect2')
+
+personSel.addEventListener('click',()=>{
+  personSel.classList.add('on')
   let psPu = document.querySelector('.passengers-popup');
+  
   if(psPu.style.display = 'none'){
     psPu.style.display = 'block'
     let closeBtn = document.querySelector('.close-btn').addEventListener('click', ()=>{
       psPu.style.display = 'none'
+      personSel.classList.remove('on')
   })
-} else {
-  psPu.style.display = 'none'
+}else{
+   psPu.style.display = 'none'
 }
 })
