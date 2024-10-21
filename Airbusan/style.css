@@ -18,12 +18,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul, li{list-style: none;}
 
 a{text-decoration:none; color: inherit;}
 button { background:transparent; border:0; outline:none; }
 
+body{
+  min-width:1240px;
+  position: relative;
+  font-family: 'S-CoreDream-3Light';
+}
 header{
   width:100%;
   position: relative;
@@ -220,7 +231,7 @@ nav .logo img{
   left:47%;
   transform: translate(-70% -50%);
   display: flex;
-  gap:20px;
+  gap:10px;
 }
 
 .page-nav>li{
@@ -259,7 +270,7 @@ nav .logo img{
 .airserch .serch-btn, .serch-bar{
   width:100%;
   display: flex;
-  gap:10px;
+  gap:5px;
   margin-bottom: 8px;
 }
 
@@ -271,71 +282,52 @@ nav .logo img{
   cursor: pointer;
 }
 
-.airserch .serch-btn  .airselect{
-  width:100px;
+
+.airserch .serch-btn  .airselect1, .airselect2{
   height:35px;
-  background-color: transparent;
-  border-bottom:2px solid #f2f2f2;
   color:#666;
   font-size:17px;
   margin:20px 0;
-  margin-right:20px;
   cursor: pointer;
-  text-align: left;
-  padding-left: 10px;
   font-weight: bold;
   position: relative;
-  transition: all .3s;
+  font-family: 'Pretendard-Regular';
 }
 
-.airserch .serch-btn  .airselect.on{
-  border-bottom: 1px solid #999;
-  color:#222;
+.airselect1-li{
+  display: flex;
+  border-radius:5px;
 }
 
-.serch-btn li:first-child{
-  position: relative;
-}
-
-.serch-btn li .interval {
-  overflow: hidden;
-  height: 0;        /* 초기 높이 */
-  width: 100px;
-  text-align: left;
-  padding-left: 10px;
-  position: absolute;
-  top: 80%;
-  font-weight: bold;
-  color: #666;
-  font-size: 17px;
-  cursor: pointer;
-  background-color:white;
-  transition: height 0.2s ease;
-  /* 높이의 변화를 부드럽게 */
-} 
-
-.interval.check::after{
-  content:"\f00c";
-  font-family:"Font Awesome 6 Free";
-  width: 17px;
-  height:17px;
+.airselect1{
   text-align: center;
-  position: absolute;
-  top:5px;
-  left:80px;
-  font-size:14px;
+  width:90px;
+  background-color: #f1f1f1;
+  color: #666;
 }
 
-.serch-btn li .interval:hover{
-  color: #2A3692;
+.airselect2{
+  margin-left:15px;
+  width:90px;
+  padding-left:10px;
+  text-align:left;
+  background-color: transparent;
 }
 
+.airserch .serch-btn  .airselect1.on{
+  background-color: #161C4E;
+  color: white;
+}
+.airserch .serch-btn  .airselect2.on{
+  border-bottom: 1px solid #2A3692;
+  color:#2A3692;
+}
 
 .passengers-popup{
   display: none;
   width:660px;
   height:608px;
-  border-radius:15px;
+  border-radius:8px;
   padding: 20px;
   border: 1px solid #eeeeee;
   background-color:white;
@@ -415,10 +407,11 @@ nav .logo img{
   height:50px;
   color: #ffffff;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 
-.serch-btn .airselect::after{
+.serch-btn .airselect2::after{
   content:"\f0d7";
   font-size:20px;
   display: inline-block;
@@ -433,14 +426,18 @@ nav .logo img{
   text-align: left;
   box-sizing: border-box;
   padding-left:2px;
-  width:180px;
   height:60px;
   border-bottom: 1px solid #ddd;
   background-color: transparent;
   font-size:25px;
   color:#444444;
+  font-family: 'Pretendard-Regular';
+  width:180px;
 }
 
+.city-select-li{
+  width:180px;
+}
 .serch-img-icon{
   padding-top:15px;
 }
@@ -448,6 +445,88 @@ nav .logo img{
 .serch-bar b{
   letter-spacing:0.8px;
 }
+
+.city-select-list{
+  width:660px;
+  height:410px;
+  background-color: white;
+  position: relative;
+  z-index:2;
+  border: 1px solid #eeeeee;
+  border-radius:8px;
+  padding: 30px;
+  top:42px;
+  left:-31px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.city-select-close{
+  position: absolute;
+  right:40px;
+  top:47px;
+  font-size:22px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.city-select-list h2{
+  margin: 10px;
+  font-size:25px;
+}
+
+.city-select-list input{
+  display: block;
+  width:100%;
+  height:50px;
+  border: none;
+  border-bottom: 1px solid #161C4E;
+  font-size: 20px;
+  padding:0 10px;
+  margin-top:40px;
+  transition: .2s, border .2s, color .2s;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.city-select-list input:hover{
+  padding-bottom: 0;
+  padding-left: 1.6rem;
+  outline: 0;
+  border: 2px solid #0064de;
+  border-radius: .3rem;
+  box-shadow: 0 4px 12px #0019481f;
+}
+
+.depart-place {
+  display: none;
+}
+
+.serch-airport-local{
+  position: absolute;
+  bottom:30px;
+  width:100%;
+  height:36px;
+  display: flex;
+  align-items: center;
+  gap:16px;
+}
+.serch-airport-local img{
+  width:30px;
+  height:30px;
+}
+
+.serch-airport-local .all-airport-btn{
+  font-size:16px;
+  font-family: 'S-CoreDream-3Light';
+  position: relative;
+}
+
+.all-airport-btn::before{
+  content: '|';
+  position: absolute;
+  left:-12px;
+  color:#c5c5c5;
+}
+
 
 .serch-bar button.serch-tem2{
   width:180px;
@@ -458,10 +537,12 @@ nav .logo img{
   padding-left:2px;
   border-bottom:1px solid #ddd;
   background-color: transparent;
-  font-size:17px;
+  font-size:16px;
   color: #444444;
   position: relative;
+  font-family: 'Pretendard-Regular';
 }
+
 .month-icon1::after, .month-icon2::after{
   content: '\f133';
   font-family: "Font Awesome 6 Free";
@@ -481,6 +562,7 @@ nav .logo img{
   border-radius:5px;
   font-size:15px;
   color: #fff;
+  font-family: 'Pretendard-Regular';
 }
 
 .addition-box{
@@ -686,7 +768,7 @@ nav .logo img{
 
 .notice-board table tr td{
   font-size:20px;
-  padding:0 5px;
+  padding:12px 5px;
 }
 
 .notice-board table td:last-child{
@@ -731,6 +813,10 @@ nav .logo img{
   margin-top:40px;
 }
 
+.sns-icon a img{
+  width:63px;
+  height: 63px;
+}
 .sns-icon img{
   width:63px;
 }

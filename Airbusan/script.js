@@ -36,27 +36,83 @@ function slide(){
 }
 setInterval(slide, 5500);
 
- let intervalBtn = document.querySelector('.serch-btn>li>button')
- let interval = document.querySelector('.interval');
+const airSelectButtons = document.querySelectorAll('.airselect1'); // 모든 airselect 버튼 선택
 
- intervalBtn.addEventListener('click', () => {
-  let currentHeight = window.getComputedStyle(interval).height; // 현재 height 가져오기  
-  intervalBtn.classList.remove('on')
-  if (currentHeight === '0px') {
-    interval.style.height = '30px'; // 원하는 높이로 설정
-    intervalBtn.classList.add('on')
-  } else {
-    interval.style.height = '0px';  // 다시 0으로 줄이기
-  }
+airSelectButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('on')) {
+      button.classList.remove('on');
+    } else {
+      // 다른 모든 버튼의 on 클래스 제거
+      airSelectButtons.forEach(btn => btn.classList.remove('on'));
+      
+      // 현재 클릭한 버튼에 on 클래스 추가
+      button.classList.add('on');
+    }
+  });
 });
 
-interval.addEventListener('mouseenter', ()=>{
-  interval.classList.add('check')
-})
-interval.addEventListener('mouseleave', ()=>{
-  interval.classList.remove('check')
-})
+const steppers = document.querySelectorAll('.stepper');
 
+steppers.forEach(stepper => {
+    const plusBtn = stepper.querySelector('.plus');
+    const minusBtn = stepper.querySelector('.minus');
+    const input = stepper.querySelector('.result');
+
+    plusBtn.addEventListener('click', () => {
+        let currentValue = parseInt(input.value);
+        let totalAdults = parseInt(document.querySelector('.adult').value)
+        let totalChild = parseInt(document.querySelector('.child').value)
+        let totalInfant = parseInt(document.querySelector('.infant').value)
+        let totalCount = totalAdults + totalChild 
+
+        if(stepper.querySelector('.adult') || stepper.querySelector('.child')){
+          if(totalCount < 9){
+            input.value = currentValue + 1;
+          } 
+        }
+        else if (stepper.querySelector('.infant')) {
+          if (currentValue < 9) {
+              input.value = currentValue + 1;
+          }
+      }
+    })
+
+    minusBtn.addEventListener('click', () => {
+        let currentValue = parseInt(input.value);
+        if (currentValue > 0) {
+            input.value = currentValue - 1;
+        }
+    });
+});
+
+let personSel = document.querySelector('.airselect2');
+let psPu = document.querySelector('.passengers-popup');
+let closeBtn = document.querySelector('.close-btn');
+let resultBtn = document.querySelector('.pas-last-btn')
+
+personSel.addEventListener('click', () => {
+    personSel.classList.toggle('on');
+  
+    if (psPu.style.display === 'none' || psPu.style.display === '') {
+        psPu.style.display = 'block';
+    } else if(psPu.style.display === 'block') {
+        psPu.style.display = 'none';
+        personSel.classList.remove('on');
+         // 현재 상태에 따라 block으로 설정
+    }
+});
+
+closeBtn.addEventListener('click', () => {
+    psPu.style.display = 'none';
+    personSel.classList.remove('on');
+});
+
+resultBtn.addEventListener('click', ()=>{
+  psPu.style.display = 'none';
+  personSel.classList.remove('on');
+  
+})
 
 
 let mainTapSlide = document.querySelector('.slide-menu')
@@ -136,21 +192,4 @@ document.querySelector('#subslidetap-left').addEventListener('click', ()=>{
     bullets[i].classList.remove('on')
   } 
     bullets[subNum].classList.add('on')
-})
-
-let personSel = document.querySelector('#airselect2')
-
-personSel.addEventListener('click',()=>{
-  personSel.classList.add('on')
-  let psPu = document.querySelector('.passengers-popup');
-  
-  if(psPu.style.display = 'none'){
-    psPu.style.display = 'block'
-    let closeBtn = document.querySelector('.close-btn').addEventListener('click', ()=>{
-      psPu.style.display = 'none'
-      personSel.classList.remove('on')
-  })
-}else{
-   psPu.style.display = 'none'
-}
 })

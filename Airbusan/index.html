@@ -104,13 +104,11 @@
     </div>
   <div class="airserch">
     <ul class="serch-btn">
-      <li><button id="airselect1" class="airselect">왕복</button>
-      <ul class="interval">
-        <li class="oneway">왕복</li>
-        <li class="oneway">편도</li>
-      </ul>
+      <li class="airselect1-li">
+      <button class="airselect1 on" data-value="왕복">왕복</button>
+      <button class="airselect1" data-value="편도">편도</button>
       </li>
-      <li><button id="airselect2" class="airselect">승객</button>
+      <li><button class="airselect2">승객</button>
         <div class="passengers-popup">
           <div class="pspopup-let">
             <span>탑승객 선택</span>
@@ -120,25 +118,25 @@
            <div class="stepper">
             <p>성인</p>
             <div class="ps-sel">
-            <button><i class="fa-solid fa-minus"></i></button>
-            <input type="text" value="1">
-            <button><i class="fa-solid fa-plus"></i></button>
+            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input class="result adult" type="text" value="0">
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
           </div>
            </div>
            <div class="stepper">
             <p>소아</p>
             <div class="ps-sel">
-            <button><i class="fa-solid fa-minus"></i></button>
-            <input type="text" value="0">
-            <button><i class="fa-solid fa-plus"></i></button>
+            <button  class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input  class="result child" type="text" value="0">
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
            </div>
           </div>
            <div class="stepper">
             <p>유아</p>
             <div class="ps-sel">
-            <button><i class="fa-solid fa-minus"></i></button>
-            <input type="text" value="0">
-            <button><i class="fa-solid fa-plus"></i></button>
+            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input class="result infant" type="text" value="0">
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
            </div>
           </div>
           </div>
@@ -162,9 +160,61 @@
       </li>
     </ul>
     <ul class="serch-bar">
-      <li><button class="serch-tem1"><b>출발지</b></button></li>
+      <li class="city-select-li"><button class="serch-tem1"><b>출발지</b></button>
+      <div class="city-select-list">
+        <button class="city-select-close"><i class="fa-regular fa-circle-xmark"></i></button>
+        <h2>출발지 검색</h2>
+        <input type="text" value="" placeholder="도시, 공항">
+        <div class="depart-place">
+          <ul class="arrive-list">한국
+            <li><a href="#">부산</a></li>
+            <li><a href="#">서울(인천)</a></li>
+            <li><a href="#">서울(김포)</a></li>
+            <li><a href="#">부산(제주)</a></li>
+          </ul>
+          <ul class="arrive-list">동북아
+            <li><a href="#">도쿄(나리타)</a></li>
+            <li><a href="#">오사카(간사이)</a></li>
+            <li><a href="#">후쿠오카</a></li>
+            <li><a href="#">삿포로(신치토세)</a></li>
+            <li><a href="#">미쓰야마</a></li>
+            <li><a href="#">칭다오</a></li>
+            <li><a href="#">시안</a></li>
+            <li><a href="#">옌지</a></li>
+            <li><a href="#">장자제</a></li>
+            <li><a href="#">하이난(싼야)</a></li>
+            <li><a href="#">닝보</a></li>
+            <li><a href="#">홍콩</a></li>
+            <li><a href="#">마카오</a></li>
+            <li><a href="#">타이베이</a></li>
+          </ul>
+          <ul class="arrive-list">동남아
+            <li><a href="#">다낭</a></li>
+            <li><a href="#">비엔티안</a></li>
+            <li><a href="#">코타키나발루</a></li>
+            <li><a href="#">보라카이(칼리보)</a></li>
+            <li><a href="#">냐짱(나트랑)</a></li>
+            <li class="arrive-new"><a href="#">방콕</a></li>
+            <li class="arrive-new"s><a href="#">덴파시르(발리)</a></li>
+          </ul>
+        </div>
+        <div class="serch-airport-local">
+          <img src="img/search-airport__local 1.png" alt="">
+          <button class="all-airport-btn">모든 지역 보기</button>
+        </div>
+      </div>
+      </li>
       <li class="serch-img-icon"><img src="img/icon1.png" alt=""></li>
-      <li><button class="serch-tem1"><b>도착지</b></button></li>
+      <li class="city-select-li"><button class="serch-tem1"><b>도착지</b></button>
+        <div class="city-select-list">
+          <button class="city-select-close"><i class="fa-regular fa-circle-xmark"></i></button>
+          <h2>도착지 검색</h2>
+          <input type="text" value="" placeholder="도시, 공항">
+          <div class="serch-airport-local">
+            <img src="img/search-airport__local 1.png" alt="">
+            <button class="all-airport-btn">모든 지역 보기</button>
+          </div>
+      </li>
       <li><button class="serch-tem2 month-icon1"><b>출발일</b></button></li>
       <li><button class="serch-tem2 month-icon2"><b>도착일</b></button></li>
       <li><button class="serch-solo">항공편 검색</button></li>
