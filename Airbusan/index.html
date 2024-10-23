@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -160,62 +160,70 @@
       </li>
     </ul>
     <ul class="serch-bar">
-      <li class="city-select-li"><button class="serch-tem1"><b>출발지</b></button>
-      <div class="city-select-list">
-        <button class="city-select-close"><i class="fa-regular fa-circle-xmark"></i></button>
+      <li class="city-select-li1"><button class="serch-tem1"><b>출발지</b></button>
+      <div class="city-select-list1">
+        <button class="city-select-close1"><i class="fa-regular fa-circle-xmark"></i></button>
         <h2>출발지 검색</h2>
-        <input type="text" value="" placeholder="도시, 공항">
-        <div class="depart-place">
-          <ul class="arrive-list">한국
-            <li><a href="#">부산</a></li>
-            <li><a href="#">서울(인천)</a></li>
-            <li><a href="#">서울(김포)</a></li>
-            <li><a href="#">부산(제주)</a></li>
-          </ul>
-          <ul class="arrive-list">동북아
-            <li><a href="#">도쿄(나리타)</a></li>
-            <li><a href="#">오사카(간사이)</a></li>
-            <li><a href="#">후쿠오카</a></li>
-            <li><a href="#">삿포로(신치토세)</a></li>
-            <li><a href="#">미쓰야마</a></li>
-            <li><a href="#">칭다오</a></li>
-            <li><a href="#">시안</a></li>
-            <li><a href="#">옌지</a></li>
-            <li><a href="#">장자제</a></li>
-            <li><a href="#">하이난(싼야)</a></li>
-            <li><a href="#">닝보</a></li>
-            <li><a href="#">홍콩</a></li>
-            <li><a href="#">마카오</a></li>
-            <li><a href="#">타이베이</a></li>
-          </ul>
-          <ul class="arrive-list">동남아
-            <li><a href="#">다낭</a></li>
-            <li><a href="#">비엔티안</a></li>
-            <li><a href="#">코타키나발루</a></li>
-            <li><a href="#">보라카이(칼리보)</a></li>
-            <li><a href="#">냐짱(나트랑)</a></li>
-            <li class="arrive-new"><a href="#">방콕</a></li>
-            <li class="arrive-new"s><a href="#">덴파시르(발리)</a></li>
-          </ul>
-        </div>
-        <div class="serch-airport-local">
+        <input class="city-select-input" type="text" value="" placeholder="도시, 공항">
+        <div class="serch-airport-local1">
           <img src="img/search-airport__local 1.png" alt="">
           <button class="all-airport-btn">모든 지역 보기</button>
         </div>
       </div>
       </li>
       <li class="serch-img-icon"><img src="img/icon1.png" alt=""></li>
-      <li class="city-select-li"><button class="serch-tem1"><b>도착지</b></button>
-        <div class="city-select-list">
-          <button class="city-select-close"><i class="fa-regular fa-circle-xmark"></i></button>
+      <li class="city-select-li2"><button class="serch-tem1"><b>도착지</b></button>
+        <div class="city-select-list2">
+          <button class="city-select-close2"><i class="fa-regular fa-circle-xmark"></i></button>
           <h2>도착지 검색</h2>
           <input type="text" value="" placeholder="도시, 공항">
-          <div class="serch-airport-local">
+          <div class="serch-airport-local2">
             <img src="img/search-airport__local 1.png" alt="">
             <button class="all-airport-btn">모든 지역 보기</button>
           </div>
       </li>
-      <li><button class="serch-tem2 month-icon1"><b>출발일</b></button></li>
+      <li><button class="serch-tem2 month-icon1"><b>출발일</b></button>
+        <div class="dialog-content-datepicker">
+          <div class="datepicker">
+            <input type="text" id="input_date">
+            <div class="datepicker-year-month">
+              <button type="button" onclick="changeMonth(-1)"><i class="fa fa-chevron-left"></i></button>
+              <input type="text" id="year" value="2024">
+              <select name="" id="month">
+                <option value="1">1월</option>
+                <option value="2">2월</option>
+                <option value="3">3월</option>
+                <option value="4">4월</option>
+                <option value="5">5월</option>
+                <option value="6">6월</option>
+                <option value="7">7월</option>
+                <option value="8">8월</option>
+                <option value="9">9월</option>
+                <option value="10">10월</option>
+                <option value="11">11월</option>
+                <option value="12">12월</option>
+              </select>
+              <button type="button" onclick="changeMonth(+1)"><i class="fa fa-chevron-right"></i></button>
+            </div>
+            <div class="datepicker-month-week">
+              <table class="datepicker-table">
+                <thead>
+                    <tr>
+                        <th style="color:red;">일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th style="color:red;">토</th>
+                    </tr>
+                </thead>
+                <tbody id="tb_tbody"></tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </li>
       <li><button class="serch-tem2 month-icon2"><b>도착일</b></button></li>
       <li><button class="serch-solo">항공편 검색</button></li>
     </ul>
@@ -367,6 +375,10 @@
       </ul>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

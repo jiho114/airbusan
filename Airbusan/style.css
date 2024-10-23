@@ -336,6 +336,10 @@ nav .logo img{
   font-family: 'S-CoreDream-3Light';
 }
 
+.passengers-popup.on{
+  display: block;
+}
+
 .pspopup-let{
   font-size: 25px;
   padding:15px;
@@ -435,8 +439,9 @@ nav .logo img{
   width:180px;
 }
 
-.city-select-li{
+.city-select-li1, .city-select-li2{
   width:180px;
+  height:100%;
 }
 .serch-img-icon{
   padding-top:15px;
@@ -446,7 +451,7 @@ nav .logo img{
   letter-spacing:0.8px;
 }
 
-.city-select-list{
+.city-select-list1, .city-select-list2{
   width:660px;
   height:410px;
   background-color: white;
@@ -460,7 +465,16 @@ nav .logo img{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 
-.city-select-close{
+.city-select-list1, .city-select-list2 {
+  display: none;
+}
+
+.city-select-list1.active, .city-select-list2.active{
+  display: block;
+}
+
+
+.city-select-close1, .city-select-close2{
   position: absolute;
   right:40px;
   top:47px;
@@ -469,12 +483,12 @@ nav .logo img{
   cursor: pointer;
 }
 
-.city-select-list h2{
+.city-select-list1 h2, .city-select-list2 h2{
   margin: 10px;
   font-size:25px;
 }
 
-.city-select-list input{
+.city-select-list1 input, .city-select-list2 input{
   display: block;
   width:100%;
   height:50px;
@@ -487,7 +501,7 @@ nav .logo img{
   font-family: 'S-CoreDream-3Light';
 }
 
-.city-select-list input:hover{
+.city-select-list1 input:hover, .city-select-list2 input:hover{
   padding-bottom: 0;
   padding-left: 1.6rem;
   outline: 0;
@@ -496,11 +510,8 @@ nav .logo img{
   box-shadow: 0 4px 12px #0019481f;
 }
 
-.depart-place {
-  display: none;
-}
 
-.serch-airport-local{
+.serch-airport-local1, .serch-airport-local2{
   position: absolute;
   bottom:30px;
   width:100%;
@@ -509,12 +520,12 @@ nav .logo img{
   align-items: center;
   gap:16px;
 }
-.serch-airport-local img{
+.serch-airport-local1 img, .serch-airport-local2 img{
   width:30px;
   height:30px;
 }
 
-.serch-airport-local .all-airport-btn{
+.serch-airport-local1 .all-airport-btn, .serch-airport-local2 .all-airport-btn{
   font-size:16px;
   font-family: 'S-CoreDream-3Light';
   position: relative;
@@ -525,6 +536,10 @@ nav .logo img{
   position: absolute;
   left:-12px;
   color:#c5c5c5;
+}
+
+.all-airport-btn:hover{
+  color:#2A3692;
 }
 
 
@@ -550,6 +565,73 @@ nav .logo img{
   top:50%;
   right:0;
   transform: translate(-50%, -50%);
+}
+
+.dialog-content-datepicker{
+  width:400px;
+  height:400px;
+  border: 1px solid #eeeeee;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top:205px;
+  z-index: 10;
+  left:400px;
+  display: none;
+}
+
+.dialog-content-datepicker.active{
+  display: block;
+}
+
+.datepicker{
+  width:100%;
+  height:100%;
+  padding: 25px;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.datepicker .datepicker-year-month{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datepicker-year-month #year{
+  border: 0;
+  font-size: 20px;
+  width:60px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'S-CoreDream-3Light';
+  margin-left: 50px;
+}
+
+.datepicker-year-month #month{
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'S-CoreDream-3Light';
+  margin-right: 50px;
+}
+
+.datepicker-month-week{
+  width:100%;
+  height:100%;
+}
+
+.datepicker-month-week .datepicker-table{
+  width:100%;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  height:300px;
+}
+
+#input_date{
+  display: none;
 }
 
 .serch-bar button.serch-solo{
