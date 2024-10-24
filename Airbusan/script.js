@@ -165,130 +165,25 @@ document.addEventListener('click', () => {
 });
 
 
-function checkLeapYear(year) {
-  if (year % 400 == 0) {
-    return true;
-  } else if (year % 100 == 0) {
-    return false;
-  } else if (year % 4 == 0) {
-    return true;
-  } else {
-    return false;
+const departurePicker = flatpickr("#departure", {
+  dateFormat: "Y-m-d",
+  minDate:"today",
+  locale: "ko",
+  onChange: function(selectedDates) {
+      // 도착일 입력 필드 활성화
+      document.getElementById("arrival").disabled = false;
+      // 도착일 Flatpickr 초기화
+      arrivalPicker.set('minDate', selectedDates[0]); // 출발일 이후만 선택 가능
+      arrivalPicker.open(); // 도착일 데이트피커 열기
   }
-}
-
-function getFirstDayOfWeek(year, month) {
-  if (month < 10) month = "0" + month;
-  return (new Date(year + "-" + month + "-01")).getDay();
-}
-
-function changeYearMonth(year, month) {
-  let monthDay = [31, 28, 30, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  if (month == 2) {
-    if (checkLeapYear(year)) monthDay[1] = 29;
-  }
-
-  let first_day_of_week = getFirstDayOfWeek(year, month)
-  let arr_celender = [];
-  for (let i = 0; i < first_day_of_week; i++) {
-    arr_celender.push("");
-  }
-
-  for (let i = 1; i <= monthDay[month - 1]; i++) {
-    arr_celender.push(String(i))
-  }
-
-  let remainDay = 7 - (arr_celender.length & 7);
-  if (remainDay < 7) {
-    for (let i = 0; i < remainDay; i++) {
-      arr_celender.push("");
-    }
-  }
-  renderCelender(arr_celender);
-}
-
-function renderCelender(data) {
-  let h = [];
-  for (let i = 0; i < data.length; i++) {
-    if (i == 0) {
-      h.push('<tr>')
-    } else if (i % 7 == 0) {
-      h.push('</tr>')
-      h.push('<tr>')
-    }
-
-    h.push('<td onclick="setDate(' + data[i] + ');" style = "cursor:pointer;">' + data[i] + '</td>')
-  }
-  h.push('</tr>')
-  $("#tb_tbody").html(h.join(""));
-}
-
-function setDate(day) {
-  if (day < 10) day = "0" + day;
-  $("#input_date").val(current_year + "-" + current_month + "-" + day);
-  const inpp = document.querySelector('#input_date');
-  document.querySelector('.month-icon1 b').innerText = inpp.value;
-} 
-
-let datepickerLi = document.querySelector('.month-icon1')
-let datepicker = document.querySelector('.dialog-content-datepicker')
-
-datepickerLi.addEventListener('click', (event)=>{
-  event.stopPropagation()
-  datepicker.classList.toggle('active')
-})
-
-datepicker.addEventListener('click', (event) => {
-  event.stopPropagation(); // 리스트 내부 클릭 시 닫히지 않도록 방지
 });
 
-document.addEventListener('click', () => {
-  datepicker.classList.remove('active');
+// 도착일 Flatpickr 초기화
+const arrivalPicker = flatpickr("#arrival", {
+  dateFormat: "Y-m-d",
+  locale: "ko",
+  minDate: "today" // 기본적으로 오늘 날짜 이후로 설정
 });
-
-document.querySelector('.month-icon2').addEventListener('click', ()=>{
-    alert('출발일이 설정되지 않았습니다.')
-})
-
-document.querySelector('.serch-solo').addEventListener('click', ()=>{
-  alert('출발일과 도착일이 설정되지 않았습니다.');
-})
-
-
-
-function changeMonth(diff) {
-  if (diff == undefined) {
-    current_month = parseInt($("#month").val());
-  } else {
-    current_month = current_month + diff;
-
-    if (current_month == 0) {
-      current_year = current_year - 1;
-      current_month = 12;
-    } else if (current_month == 13) {
-      current_year = current_year + 1;
-      current_month = 1;
-    }
-  }
-  loadCelender();
-}
-
-function loadCelender() {
-
-  $("#year").val(current_year);
-  $("#month").val(current_month);
-
-  changeYearMonth(current_year, current_month)
-
-}
-
-let current_year = (new Date()).getFullYear();
-let current_month = (new Date()).getMonth() + 1;
-
-$("#year").val(current_year)
-$("#month").val(current_month)
-
-changeYearMonth(current_year, current_month)
 
 
 

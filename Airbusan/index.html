@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/350ae1936f.js" crossorigin="anonymous"></script>
   <title>airbusan</title>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
   <script src="script.js" defer></script>
 </head>
 
@@ -119,7 +122,7 @@
             <p>성인</p>
             <div class="ps-sel">
             <button class="minus"><i class="fa-solid fa-minus"></i></button>
-            <input class="result adult" type="text" value="0">
+            <input class="result adult" type="text" value="0"  disabled>
             <button class="plus"><i class="fa-solid fa-plus"></i></button>
           </div>
            </div>
@@ -127,7 +130,7 @@
             <p>소아</p>
             <div class="ps-sel">
             <button  class="minus"><i class="fa-solid fa-minus"></i></button>
-            <input  class="result child" type="text" value="0">
+            <input  class="result child" type="text" value="0"  disabled>
             <button class="plus"><i class="fa-solid fa-plus"></i></button>
            </div>
           </div>
@@ -135,7 +138,7 @@
             <p>유아</p>
             <div class="ps-sel">
             <button class="minus"><i class="fa-solid fa-minus"></i></button>
-            <input class="result infant" type="text" value="0">
+            <input class="result infant" type="text" value="0"  disabled>
             <button class="plus"><i class="fa-solid fa-plus"></i></button>
            </div>
           </div>
@@ -182,49 +185,12 @@
             <button class="all-airport-btn">모든 지역 보기</button>
           </div>
       </li>
-      <li><button class="serch-tem2 month-icon1"><b>출발일</b></button>
-        <div class="dialog-content-datepicker">
-          <div class="datepicker">
-            <input type="text" id="input_date">
-            <div class="datepicker-year-month">
-              <button type="button" onclick="changeMonth(-1)"><i class="fa fa-chevron-left"></i></button>
-              <input type="text" id="year" value="2024">
-              <select name="" id="month">
-                <option value="1">1월</option>
-                <option value="2">2월</option>
-                <option value="3">3월</option>
-                <option value="4">4월</option>
-                <option value="5">5월</option>
-                <option value="6">6월</option>
-                <option value="7">7월</option>
-                <option value="8">8월</option>
-                <option value="9">9월</option>
-                <option value="10">10월</option>
-                <option value="11">11월</option>
-                <option value="12">12월</option>
-              </select>
-              <button type="button" onclick="changeMonth(+1)"><i class="fa fa-chevron-right"></i></button>
-            </div>
-            <div class="datepicker-month-week">
-              <table class="datepicker-table">
-                <thead>
-                    <tr>
-                        <th style="color:red;">일</th>
-                        <th>월</th>
-                        <th>화</th>
-                        <th>수</th>
-                        <th>목</th>
-                        <th>금</th>
-                        <th style="color:red;">토</th>
-                    </tr>
-                </thead>
-                <tbody id="tb_tbody"></tbody>
-            </table>
-            </div>
-          </div>
-        </div>
+      <li class="departure-datepicker"><label for="departure"><b>출발일</b></label>
+        <input type="text" id="departure" >
       </li>
-      <li><button class="serch-tem2 month-icon2"><b>도착일</b></button></li>
+      <li class="arrival-datepicker"><label for="arrival"><b>도착일</b></label>
+        <input type="text" id="arrival" disabled>
+      </li>
       <li><button class="serch-solo">항공편 검색</button></li>
     </ul>
   </div>
