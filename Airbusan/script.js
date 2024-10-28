@@ -265,3 +265,15 @@ document.querySelector('#subslidetap-left').addEventListener('click', () => {
   }
   bullets[subNum].classList.add('on')
 })
+
+let bannerSlideImg = document.querySelectorAll('.banner-slide li')
+let bannerBullet = document.querySelectorAll('.page-nav li')
+
+for(let i = 0; i < bannerBullet.length; i++){
+  bannerBullet[i].addEventListener('click', ()=>{
+    bannerBullet.forEach(bullet => bullet.classList.remove('on'));
+    bannerBullet[i].classList.add('on')
+    bannerSlideImg.forEach(slide => slide.classList.remove('on'))
+   bannerSlideImg[i].classList.add('on')
+  })
+} console.log(bannerBullet)
