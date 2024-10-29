@@ -895,26 +895,27 @@ nav .logo img{
 }
 
 .click-servis-tap button:nth-child(1){
-  top:43%;
+  top:38%;
   left:0;
   transform: translateY(-50%);
 }
 
 .click-servis-tap button:nth-child(2){
-  top:43%;
+  top:38%;
   right:0;
   transform: translate(0, -50%);
 }
 
 .Bullet-box{
   width:1200px;
-  margin:10px auto;
+  margin:30px auto;
 }
 
 .bullets{
   margin: 0 auto;
-  width:100px;
+  width:120px;
   display: flex;
+  
   justify-content: space-between;
 }
 
@@ -931,7 +932,7 @@ nav .logo img{
 }
 
 .bottom-nav{
-  margin-top: 100px;
+  margin-top: 80px;
   width:100%;
   height:100%;
   border-top:1px solid rgba(0, 0, 0, 0.1);
