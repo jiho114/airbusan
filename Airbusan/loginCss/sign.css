@@ -1,31 +1,6 @@
-@font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
- @font-face {
-  font-family: 'twaysky';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul, li{list-style: none;}
 
@@ -257,6 +232,10 @@ nav .logo img{
   border-radius: 50%;
 }
 
+.select-card a{
+  overflow: hidden;
+}
+
 .bx h2{
   text-align: center;
   margin-top: 20px;
@@ -309,24 +288,24 @@ nav .logo img{
 
 /* 개인 약관동의 */
 
-.individual-hidden-box{
+.individual-hidden-box, .business-hidden-box, .travel-hidden-box{
   width:100%;
   height:100%;
   display: none;
 }
 
-.individual-hidden-box.on{
+.individual-hidden-box.on, .business-hidden-box.on, .travel-hidden-box.on{
   display: block;
 }
 
-.individual-hidden-layout{
+.individual-hidden-layout,.business-hidden-layout, .travel-hidden-layout{
   width:1200px;
   margin: 0 auto;
   margin-top:500px;
   text-align: center;
 }
 
-.individual-hidden-layout>h2{
+.individual-hidden-layout h2, .business-hidden-layout h2, .travel-hidden-layout h2{
   font-size: 26px;
   color: #272727;
 }
@@ -345,7 +324,7 @@ nav .logo img{
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #DDDDDD;
   border-radius: 10px;
   width:100%;
   height:60px;
@@ -413,10 +392,55 @@ nav .logo img{
 }
 
 
+.business-hidden-list, .travel-hidden-list{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin:100px 0;
+  gap: 30px;
+}
 
+.business-hidden-list li, .travel-hidden-list li{
+  width:400px;
+  height:170px;
+  border: 1px solid #DDDDDD;
+  border-radius:7px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
 
+.business-hidden-list li a, .travel-hidden-list li a{
+  width:100%;
+  padding: 20px;
+  
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
 
+.txt-box h3{
+  font-size: 23px;
+  font-weight: bold;
+  color: #161C4E;
+}
 
+.txt-box p {
+  font-size: 16px;
+  color:#999999 ;
+  margin-top: 5px;
+}
+
+ .business-hidden-list li i, .travel-hidden-list li i{
+  text-align: center;
+  width:120px;
+  height:120px;
+  font-size: 50px;
+  line-height:120px;
+  margin-left: 10px;
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  color:#161C4E;
+}
 
 .posiht{
   width:100%;
