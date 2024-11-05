@@ -139,6 +139,36 @@ nav .logo img{
 
 }
 
+.header-util {
+  width:120px;
+  display: flex;
+  justify-content: space-around;
+  color:#000000;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.header-util li a{
+  display: block;
+  font-size:14px;
+  width:60px;
+  height:40px;
+  color: #ffffff;
+  text-align: center;
+  padding:3px 0;
+  border-radius:10px;
+  line-height:34px;
+}
+
+.mypage{
+  width:20px;
+  height: 80px;
+  font-size: 19px;
+ font-weight: bold;
+ line-height: 80px;
+ cursor: pointer;
+}
+
+
 .sub{
   transition:max-height .5s;
   max-height:0px;

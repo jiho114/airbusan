@@ -1,6 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+ @font-face {
+  font-family: 'twaysky';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul, li{list-style: none;}
 
@@ -71,6 +98,37 @@ header{
   font-size:14px;
   transition: all .3s
 }
+
+.header-util {
+  width:120px;
+  display: flex;
+  justify-content: space-around;
+  color:#000000;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.header-util li a{
+  display: block;
+  font-size:14px;
+  width:60px;
+  height:40px;
+  color: #ffffff;
+  text-align: center;
+  padding:3px 0;
+  border-radius:10px;
+  line-height:34px;
+}
+
+.mypage{
+  width:20px;
+  height: 80px;
+  font-size: 19px;
+ font-weight: bold;
+ line-height: 80px;
+ cursor: pointer;
+}
+
+
 
 nav .logo img{
   width:103px;
