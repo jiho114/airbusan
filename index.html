@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainCss/style.css">
+  <script src="https://kit.fontawesome.com/350ae1936f.js" crossorigin="anonymous"></script>
+  <title>airbusan</title>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+  <script src="mainJs/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="guide">
+      <div class="layout-header">
+        <i class="fa-solid fa-bullhorn" style="color: #ffffff;"></i>
+        <ul class="guide-let-box">
+          <li class="top">
+            <a href="#"><p>국내선 유류할증료 안내 &#40;2024년10월&#126;&#41;</p></a>
+          </li>
+          <li class="topplus">
+            <a href="#"><p> 변경운항공지 제 18호 태풍 끄라톤 관련 운항 안내</p></a>
+          </li>
+          <li class="topplus">
+            <a href="#"><p>영국 국립자연사박물관 특별전 할인 안내</p></a>
+          </li>
+          <li class="topplus">
+            <a href="#"><p>[중요] 취항지별 출입국 규정 (24/9/1 기준)</p></a>
+          </li>
+        </ul>
+        <ul class="header-util">
+          <li class="log"><a href="login.html">로그인</a></li>
+          <li class="sign"><a href="sign.html">회원가입</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layout-menu">
+    <div class="subBg"></div>
+    <nav>
+      <h1 class="logo"><a href="#"><img src="img/Air_Busan_logo (1).png" alt=""></a></h1>
+      <ul class="menubar">
+        <li>
+          <a href="#">예약</a>
+          <ul class="sub">
+            <li><a href="#">항공권예매</a></li>
+            <li><a href="#">나의 예약</a></li>
+            <li><a href="#">예약&#47;운임&#47;수수료 안내</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">프로모션&#47;제휴</a>
+          <ul class="sub">
+            <li><a href="#">이벤트 프로모션</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">부가서비스</a>
+          <ul class="sub">
+            <li><a href="#">부가서비스 안내</a></li>
+            <li><a href="#">좌석</a></li>
+            <li><a href="#">수하물</a></li>
+            <li><a href="#">여행자 보험</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">운항정보</a>
+          <ul class="sub">
+            <li><a href="#">출도착 안내</a></li>
+            <li><a href="#">스케줄 안내</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">체크인</a>
+          <ul class="sub">
+            <li><a href="#">온라인 체크인</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mypage">
+        <i class="fa-regular fa-user" style="color: #141414;"></i>
+      </div>
+    </nav>
+  </div>
+  </header>
+  <div class="banner">
+  <a href="#">
+    <div class="banner-img-box">
+      <ul class="banner-slide">
+        <li class="on"><img src="img/airbusan-banner4.png" alt=""></li>
+        <li><img src="img/banner2.png" alt=""></li>
+        <li><img src="img/banner3.png" alt=""></li>
+        <li><img src="img/banner1.png" alt=""></li>
+    </ul>
+    </div>
+  </a>
+  <div class="hr-line">
+  </div>
+</div>
+<div class="layout-serch">
+    <div class="banner-pagenav">
+      <ul class="page-nav">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  <div class="airserch">
+    <ul class="serch-btn">
+      <li class="airselect1-li">
+      <button class="airselect1 on" data-value="왕복">왕복</button>
+      <button class="airselect1" data-value="편도">편도</button>
+      </li>
+      <li><button class="airselect2">승객</button>
+        <div class="passengers-popup">
+          <div class="pspopup-let">
+            <span>탑승객 선택</span>
+            <button class="close-btn"><i class="fa-regular fa-circle-xmark"></i></button>
+          </div>
+          <div class="pspopup-select">
+           <div class="stepper">
+            <p>성인</p>
+            <div class="ps-sel">
+            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input class="result adult" type="text" value="0"  disabled>
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+          </div>
+           </div>
+           <div class="stepper">
+            <p>소아</p>
+            <div class="ps-sel">
+            <button  class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input  class="result child" type="text" value="0"  disabled>
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+           </div>
+          </div>
+           <div class="stepper">
+            <p>유아</p>
+            <div class="ps-sel">
+            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+            <input class="result infant" type="text" value="0"  disabled>
+            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+           </div>
+          </div>
+          </div>
+          <div class="psnotice-box">
+            <span>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                탑승객은 성인,소아 총 9명까지 선택 할 수 있습니다. 9명 초과 시 고객센터로 문의하시기 바랍니다.</p>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                만 2세 미만 유아의 경우 단독 예약이 불가 하며 좌석 제공이 되지 않습니다. 성인을 반드시 포함하여 예약해주십시오.</p>
+              <p>
+                <i class="fa-solid fa-circle-exclamation" style="color: #02245c;"></i>
+                탑승 수속 시 생년월일 확인 가능한 서류 지참이 필수입니다.</p>
+            </span>
+          </div>
+          <div class="pas-last-btn">
+            <button>적용</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="serch-bar">
+      <li class="city-select-li1"><button class="serch-tem1"><b>출발지</b></button>
+      <div class="city-select-list1">
+        <button class="city-select-close1"><i class="fa-regular fa-circle-xmark"></i></button>
+        <h2>출발지 검색</h2>
+        <input class="city-select-input" type="text" value="" placeholder="도시, 공항">
+        <div class="serch-airport-local1">
+          <img src="img/search-airport__local 1.png" alt="">
+          <button class="all-airport-btn">모든 지역 보기</button>
+        </div>
+      </div>
+      </li>
+      <li class="serch-img-icon"><img src="img/icon1.png" alt=""></li>
+      <li class="city-select-li2"><button class="serch-tem1"><b>도착지</b></button>
+        <div class="city-select-list2">
+          <button class="city-select-close2"><i class="fa-regular fa-circle-xmark"></i></button>
+          <h2>도착지 검색</h2>
+          <input type="text" value="" placeholder="도시, 공항">
+          <div class="serch-airport-local2">
+            <img src="img/search-airport__local 1.png" alt="">
+            <button class="all-airport-btn">모든 지역 보기</button>
+          </div>
+      </li>
+      <li class="departure-datepicker"><label for="departure"><b>출발일</b></label>
+        <input type="text" id="departure" >
+      </li>
+      <li class="arrival-datepicker"><label for="arrival"><b>도착일</b></label>
+        <input type="text" id="arrival" disabled>
+      </li>
+      <li><button class="serch-solo">항공편 검색</button></li>
+    </ul>
+  </div>
+</div>
+<div class="addition-box">
+  <span><h2>부가서비스</h2></span>
+  <hr>
+  <ul class="addition-icon">
+    <li><a href="#"><i class="fa-solid fa-couch"></i></a>
+      <p>사전좌석구매</p>
+    </li>
+    <li><a href="#"><i class="fa-solid fa-suitcase"></i></a>
+      <p>수하물</p>
+    </li>
+    <li><a href="#"><i class="fa-solid fa-plane-departure"></i></a>
+      <p>기내면세품</p>
+    </li>
+    <li><a href="#"><i class="fa-solid fa-notes-medical"></i></a>
+      <p>여행자보험</p>
+    </li>
+    <li><a href="#"><i class="fa-solid fa-hotel"></i></a>
+    <p>호텔</p>
+    </li>
+    <li><a href="#"><i class="fa-solid fa-credit-card"></i></a>
+    <p>제휴카드할인</p>
+    </li>
+  </ul>
+</div>
+<div class="slide-box">
+  <span><b>고객님</b>을 위한 최저가 특가!</span>
+  <div class="slide-wrap">
+    <ul class="slide-menu">
+      <li><a href="#"><img src="img/tokyo.png" alt=""></a>
+      <ul class="slide-let-box">
+        <li><p>서울/인천(ICN)</p></li>
+        <li><b>도쿄(NRT)</b></li>
+        <li><b id="krw">KRW</b>76,500</li>
+        <li><p>2024.10.04(금)</p></li>
+      </ul>
+      </li>
+      <li><a href="#"><img src="img/danang.png" alt=""></a>
+        <ul class="slide-let-box">
+          <li><p>서울/인천(ICN)</p></li>
+          <li><b>다낭(DAD)</b></li>
+          <li><b id="krw">KRW</b>83,800</li>
+          <li><p>2024.11.13(수)</p></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="img/bohol.png" alt=""></a>
+        <ul class="slide-let-box">
+          <li><p>서울/인천(ICN)</p></li>
+          <li><b>보홀(TAG)</b></li>
+          <li><b id="krw">KRW</b>91,200</li>
+          <li><p>2024.10.06(일)</p></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="img/btnam.png" alt=""></a>
+        <ul class="slide-let-box">
+          <li><p>서울/인천(ICN)</p></li>
+          <li><b>나트랑(CXR)</b></li>
+          <li><b id="krw">KRW</b>100,560</li>
+          <li><p>2024.11.25(금)</p></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="img/busan.png" alt=""></a>
+        <ul class="slide-let-box">
+          <li><p>서울/인천(ICN)</p></li>
+          <li><b>부산(PUS)</b></li>
+          <li><b id="krw">KRW</b>50,560</li>
+          <li><p>2024.11.26(토)</p></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="img/osaka.png" alt=""></a>
+        <ul class="slide-let-box">
+          <li><p>서울/인천(ICN)</p></li>
+          <li><b>오사카(KIX)</b></li>
+          <li><b id="krw">KRW</b>120,560</li>
+          <li><p>2024.11.27(일)</p></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="slide-btn-box">
+    <button id="prev"><img src="img/slidebtnleft.png" alt=""></button>
+    <button id="next"><img src="img/slidebtnright.png" alt=""></button>
+  </div>
+</div>
+
+<div class="notice-box">
+  <div class="notice-board">
+  <h2>공지사항</h2>
+  <table>
+    <thead>
+      <tr>
+        <td><a href="#">한국 출발 국제선 유류 할증료 (2024년 10월)</a></td>
+        <td><p>2024.09.19</p></td>
+      </tr>
+      <tr>
+        <td><a href="#">신규 취항 노선 스케줄 안내</a></td>
+        <td><p>2024.09.18</p></td>
+      </tr>
+      <tr>
+        <td><a href="#">영국국립자연사박물관 특별전 할인 안내</a></td>
+        <td><p>2024.09.17</p></td>
+      </tr>
+      <tr>
+        <td><a href="#">해외사이트를 통한 항공권 구매시 유의사항</a></td>
+        <td><p>2024.09.16</p></td>
+      </tr>
+      <tr>
+        <td><a href="#">시스템 정기점검 시간 안내</a></td>
+        <td><p>2024.09.15</p></td>
+      </tr>
+    </thead>
+  </table>
+</div>
+<div class="sns-link">
+  <h2>SOCIAL</h2>
+  <div class="sns-icon">
+    <a href="#"><img src="img/instagram.png" alt=""></a>
+    <a href="#"><img src="img/facebook.png" alt=""></a>
+    <a href="#"><img src="img/youtube.png" alt=""></a>
+  </div>
+</div>
+</div>
+<div class="click-servis">
+  <div class="tapslide">
+    <ul>
+      <li><a href="#"><img src="img/Untitled-1.png" alt=""></a></li>
+      <li><a href="#"><img src="img/slidehype2.png" alt=""></a></li>
+      <li><a href="#"><img src="img/slidehype3.png" alt=""></a></li>
+      <li><a href="#"><img src="img/slidehype4.png" alt=""></a></li>
+      <li><a href="#"><img src="img/slidehype3.png" alt=""></a></li>
+      <li><a href="#"><img src="img/slidehype4.png" alt=""></a></li>
+    </ul>
+    </div>
+    <div class="click-servis-tap">
+      <button id="subslidetap-left"><i class="fa-solid fa-chevron-left" style="color: #10012a;"></i></button>
+      <button id="subslidetap-right"><i class="fa-solid fa-chevron-right" style="color: #10012a;"></i></button>
+    </div>
+    <div class="Bullet-box">
+      <ul class="bullets">
+        <li class="bullet on"></li>
+        <li class="bullet"></li>
+        <li class="bullet"></li>
+        <li class="bullet"></li>
+        <li class="bullet"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <div class="bottom-nav-layout">
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">규정 및 약관</a></li>
+        <li><a href="#">기타</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-layout">
+      <ul>
+        <li><h2>에어부산(주)</h2>
+        <ul>
+          <li>대표이사 두성국</li>
+          <li>부산광역시 강서구 유동단지 1로 <br> 
+          57번가길 6(대저2동) 우:46721
+          </li>
+        </ul>
+        </li>
+        <li>
+          <ul>
+            <li>사업자등록번호 : 605-81-84518 <br>
+            통신판매업 신고번호 : 제 2021-부산강서구-0203호
+            </li>
+            <li><b>제휴, 광고 등 다양한 제안을 기다립니다</b></li>
+            <li>&copy; Copyright 2024 BY AIR BUSAN CO. LTD. All Rights reserved</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li class="footer-style-color">예약센터</li>
+          <li>1666-3060</li>
+          <li class="footer-style-color">마게팅/광고 문의</li>
+          <li>flynfun@airbusan.com</li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+

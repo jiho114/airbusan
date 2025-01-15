@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="loginCss/sign.css">
+  <script src="https://kit.fontawesome.com/350ae1936f.js" crossorigin="anonymous"></script>
+  <title>airbusan</title>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+  <script src="loginJs/sign.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="guide">
+      <div class="layout-header">
+        <i class="fa-solid fa-bullhorn" style="color: #ffffff;"></i>
+        <ul class="guide-let-box">
+          <li class="top">
+            <a href="#">
+              <p>국내선 유류할증료 안내 &#40;2024년10월&#126;&#41;</p>
+            </a>
+          </li>
+          <li class="topplus">
+            <a href="#">
+              <p> 변경운항공지 제 18호 태풍 끄라톤 관련 운항 안내</p>
+            </a>
+          </li>
+          <li class="topplus">
+            <a href="#">
+              <p>영국 국립자연사박물관 특별전 할인 안내</p>
+            </a>
+          </li>
+          <li class="topplus">
+            <a href="#">
+              <p>[중요] 취항지별 출입국 규정 (24/9/1 기준)</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="header-util">
+          <li class="log"><a href="login.html">로그인</a></li>
+          <li class="sign"><a href="sign.html">회원가입</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layout-menu">
+      <div class="subBg"></div>
+      <nav>
+        <h1 class="logo"><a href="index.html"><img src="img/Air_Busan_logo (1).png" alt=""></a></h1>
+        <ul class="menubar">
+          <li>
+            <a href="#">예약</a>
+            <ul class="sub">
+              <li><a href="#">항공권예매</a></li>
+              <li><a href="#">나의 예약</a></li>
+              <li><a href="#">예약&#47;운임&#47;수수료 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">프로모션&#47;제휴</a>
+            <ul class="sub">
+              <li><a href="#">이벤트 프로모션</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">부가서비스</a>
+            <ul class="sub">
+              <li><a href="#">부가서비스 안내</a></li>
+              <li><a href="#">좌석</a></li>
+              <li><a href="#">수하물</a></li>
+              <li><a href="#">여행자 보험</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">운항정보</a>
+            <ul class="sub">
+              <li><a href="#">출도착 안내</a></li>
+              <li><a href="#">스케줄 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">체크인</a>
+            <ul class="sub">
+              <li><a href="#">온라인 체크인</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="mypage">
+          <i class="fa-regular fa-user" style="color: #141414;"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="sign-up">
+    <div class="gradation-box">
+      <div class="sign-layout1">
+        <div class="sign-let-box">
+          <h2>회원가입을 환영합니다.</h2>
+          <p>여행의 지혜, FLY SMART 에어부산 회원가입을 시작하세요!</p>
+        </div>
+      </div>
+    </div>
+    <div class="sign-layout2">
+      <div class="select-card">
+        <a href="#" class="individual-a">
+          <div class="individual bx on">
+            <div class="individual-icon icon">
+              <i class="fa-solid fa-person"></i>
+            </div>
+            <h2>개인</h2>
+            <ul class="individual-list">
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>특가 항공권 구매</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>STAMP 적립 혜택</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>다양한 서비스 혜택</p>
+              </li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="business-a">
+          <div class="business bx">
+            <div class="business-icon icon">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h2>기업체</h2>
+            <p class="ex">1인 이상 일반기업, 공공기관, <br>
+              협회, 단체정보등록 담당자 대상</p>
+            <ul class="business-list">
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>기업 우대 할인 혜택</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>STAMP 적립 혜택</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>무료 여정 변경 혜택</p>
+              </li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="travel-a">
+          <div class="travel bx">
+            <div class="travel-icon icon">
+              <i class="fa-solid fa-person-walking-luggage"></i>
+            </div>
+            <h2>여행사</h2>
+            <p class="ex">여행 숙박업 <br>사업자등록증이 있는 <br>
+              사업체 정보등록 담당자 대상</p>
+            <ul class="travel-list">
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>특가 항공권 구매</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>STAMP 적립 혜택</p>
+              </li>
+              <li>
+                <img src="img/sign-check.png" alt="">
+                <p>다양한 서비스 혜택</p>
+              </li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="individual-hidden-box">
+    <div class="individual-hidden-layout">
+      <h2>개인 회원 약관동의</h2>
+      <ul class="individual-hidden-lise">
+        <li>
+          <div class="individual-checkbox">
+            <input type="checkbox">
+            <p class="individual-hidden-color">[필수]</p>
+            <p>회원약관에 동의합니다.</p>
+          </div>
+          <div class="individual-view-btn">
+            <button id="membership">보기</button>
+            <div class="membership-box on">
+              <div class="title-closebtn-box">
+                <p>회원 약관</p>
+                <button><i class="fa-regular fa-circle-xmark"></i></button>
+              </div>
+              <div class="mebership-let-box">
+                <p>
+                  제1장 총칙 
+                  <br>
+                  제1조 [목적]
+                  <br>
+                  이 약관은 에어부산㈜(이하 "에어부산"이라 합니다)이 운영하는 에어부산 인터넷 웹사이트(airbusan.com) 등 에어부산에서 운영하는 사이트에서 제공하는 인터넷 관련 서비스(이하
+                  "서비스"라 합니다)를 이용함에 있어 에어부산과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+                  <br>
+                  제2조 [용어의 정의]
+                  <br>
+                  ① "에어부산 웹사이트"란 에어부산이 정보 또는 서비스를 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비와 정보통신망을 이용하여 정보 및 서비스를 이용자에게 제공하고 재화 또는
+                  용역을 거래할 수 있도록 설정한 가상의 영업장을 말합니다.
+                  ② "이용자"란 에어부산 웹사이트에 접속하여 이 약관에 따라 에어부산이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+                  ③ "회원"이라 함은 에어부산 웹사이트에 개인정보를 제공하여 회원등록을 한 자로서, 에어부산의 정보를 지속적으로 제공받으며, 에어부산이 제공하는 서비스를 계속적으로 이용할 수 있는
+                  자를 말합니다.
+                  ④ "비회원"이라 함은 회원으로 가입하지 않고 에어부산이 제공하는 정보 및 서비스를 이용하는 자를 말합니다.
+                  <br>
+                  제3조 [약관의 게시 및 개정]
+                  <br>
+                  ① 에어부산은 이 약관의 내용과 상호, 연락처(전자우편주소, 전화번호, 팩스번호 등), 통신판매업신고번호 등을 이용자가 알 수 있도록 초기 서비스화면(전면)에 게시합니다.
+                  ② 에어부산은 약관의규제에관한법률, 전자거래기본법, 전자서명법, 개인정보보호법, 소비자기본법, 전자상거래등에서의소비자보호에관한법률 등 관련법령을 위반하지 않는 범위에서 이 약관을
+                  개정할 수 있습니다.
+                  ③ 약관을 개정할 경우에는 개정사유 및 적용일자를 명시하여 현행약관과 함께 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다.
+                  ④ 개정약관은 개정된 내용이 관계 법령에 위배되지 않는 한 개정 이전에 회원으로 가입한 이용자에게도 적용됩니다. 다만 개정약관의 적용을 거절하는 뜻을 약관의 공시기간 내에 에어부산에
+                  명시적으로 통지한 이용자에 대해서는 개정전의 약관조항이 적용됩니다.
+                  ⑤ 이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 전자상거래등에서의소비자보호에관한법률, 약관의규제에관한법률, 공정거래위원회가 정하는 전자상거래등에서의소비자보호지침,
+                  관계법령 또는 상관례에 따릅니다.
+                  <br>
+                  제2장 서비스 이용
+                  <br>
+                  제4조 [서비스의 제공]
+                  <br>
+                  에어부산이 웹사이트를 통하여 제공하는 서비스는 아래와 같습니다.
+                  1. 항공권 예약 및 구매에 관련된 정보, 서비스 제공
+                  2. 에어텔, 호텔, 렌터카 등 여행 관련 정보, 서비스 제공
+                  3. 기타 에어부산이 정하는 업무
+                  <br>
+                  제5조 [서비스의 중단]
+                  <br>
+                  ① 에어부산은 컴퓨터 등 정보통신설비의 점검·보수·교체·고장·통신두절 등의 경우에는 웹사이트 상의 서비스 제공을 일시적으로 중단할 수 있습니다.
+                  ② 제1항에 의한 서비스 중단의 경우 에어부산은 제8조에 정한 방법으로 이용자에게 통지합니다.
+                  ③ 에어부산은 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 이용자 또는 제 3자가 입은 손해를 배상하지 아니합니다. 단, 에어부산에 고의 또는 중대한 과실이 있는 경우에는
+                  그러하지 아니합니다.
+                  ④ 에어부산은 이용자가 다음 각 호의 1에 해당하는 행위 또는 행위를 할 우려가 있는 경우 사전통지 없이 서비스 이용을 중단할 수 있습니다.
+                  1. 공공질서 또는 미풍양속에 반하는 행위
+                  2. 범죄와 관련되었다고 추정되는 일체의 행위
+                  3. 공공의 이익을 저해할 목적으로 서비스 이용을 계획 또는 실행하는 행위
+                  4. 서비스의 제공을 방해하는 등 서비스의 건전한 이용을 저해하는 행위
+                  ⑤ 제4항에 의한 서비스 중단의 경우 에어부산은 이용자 또는 제3자가 입은 손해를 배상하지 아니합니다.
+                  <br>
+                  제6조 [회원가입]
+                  <br>
+                  ① 이용자는 정해진 가입양식에 따라 회원정보를 기입한 후 이 약관에 동의한다는 의사표시를 하는 방법으로 회원가입을 신청합니다.
+                  ② 에어부산은 이용자가 다음 각호에 해당하지 않는 한 회원으로 등록합니다.
+                  1. 가입신청자가 이 약관 제7조제4항에 의하여 회원자격을 상실한 경우. 다만 회원자격 상실 후 3년이 경과한 자로서 에어부산의 회원 재가입 승낙을 얻은 경우는 예외로 합니다.
+                  2. 등록 내용에 허위, 기재누락, 오기가 있는 경우
+                  3. 기타 회원으로 등록하는 것이 기술적으로 현저히 지장이 있다고 판단되는 경우
+                  ③ 회원가입계약의 성립시기는 에어부산의 승낙이 회원에게 도달한 시점으로 합니다.
+                  ④ 회원은 제13조제1항에 열거된 등록사항에 변경이 있는 경우, 즉시 전자우편 기타 이에 준하는 방법으로 그 변경사항을 알려야 합니다.
+                  <br>
+                  제7조 [회원탈퇴 및 자격상실 등]
+                  <br>
+                  ① 회원은 언제든지 탈퇴신청을 할 수 있으며, 이 경우 에어부산은 즉시 회원탈퇴를 처리합니다.
+                  ② 회원이 다음 각 호의 사유에 해당하는 경우 에어부산은 서비스 이용을 제한 또는 정지시킬 수 있습니다.
+                  1. 회원 사망 시
+                  2. 가입 신청 시 허위 내용을 기재하거나 2이상의 I.D.로 이중 등록한 경우
+                  3. 에어부산 웹사이트에서 구매한 항공권 등의 대금지급채무 및 기타 사이트 이용과 관련하여 회원이 부담하는 채무를 불이행하는 경우
+                  4. 타인의 에어부산 웹사이트 이용을 방해하거나 타인의 개인정보를 도용하는 등 전자거래질서를 침해·위협하는 경우
+                  5. 에어부산 웹사이트를 이용하여 이 약관이 금지하는 행위 또는 법령, 공서양속 등에 반하는 행위를 하는 경우
+                  6. 회원가입 후, 연속하여 1년 동안 에어부산 웹사이트를 이용하기 위해 로그인한 기록이 없는 경우
+                  ③ 에어부산이 서비스 이용을 제한·정지하고자 할 때에는 미리 그 사유, 일시, 기간을 전자우편, 전화, 서면 등으로 이용자에게 통지합니다. 다만 긴급을 요할 경우에는 조치 후에 통지할
+                  수 있습니다.
+                  ④ 에어부산이 서비스이용을 제한·정지시킨 후 그 제재사유가 된 행위가 반복되거나 30일 이내에 그 사유가 시정되지 아니하는 경우 에어부산은 회원자격을 상실시킬 수 있습니다.
+                  ⑤ 에어부산이 회원자격을 상실시키는 경우에는 회원등록을 말소하며, 이 경우 말소 전에 회원에게 이를 통지합니다.
+                  ⑥ 서비스이용의 제한, 정지, 회원자격의 상실로 인한 손해에 대해서 에어부산은 책임을 지지 않습니다.
+                  <br>
+                  제8조 [회원에 대한 통지]
+                  <br>
+                  ① 에어부산이 회원에 대한 통지를 하는 경우 회원이 제출한 전자우편주소로 할 수 있습니다.
+                  ② 에어부산은 불특정다수의 회원에게 통지하는 경우, 1주일이상 공시함으로써 개별통지에 갈음 할 수 있습니다. 다만, 회원 본인의 거래와 관련하여 중대한 영향을 미치는 사항에 대하여는
+                  개별통지를 합니다.
+                  ③ 제2항의 사유로 통지하는 경우, 부득이한 사정에 의해 사전 공시기간이 감축되거나 생략될 수 있습니다.
+                  <br>
+                  제9조 [구매신청]
+                  <br>
+                  이용자는 에어부산이 정한 아래 방법에 의하여 항공권 등의 구매 신청을 할 수 있습니다.
+                  1. 성명, 성별, 연락처 등 입력
+                  2. 개인 정보 수집 및 규정, 법적 고지문, 약관 등에 동의한다는 표시(예: 마우스 클릭)
+                  3. 결제수단 선택
+                  <br>
+                  제10조 [구매계약의 성립]
+                  <br>
+                  ① 에어부산은 제9조에 정한 방법에 의한 구매 신청에 대하여 다음 각 호에 해당하는 경우 승낙하지 않을 수 있습니다.
+                  1. 신청 내용에 허위, 기재누락, 오기가 있는 경우
+                  2. 구매신청에 대한 승낙이 영업상 또는 기술상 현저히 지장이 있다고 판단되는 경우
+                  ② 에어부산의 승낙이 제12조제1항의 수신확인통지형태로 이용자에게 도달한 시점에 계약이 성립한 것으로 봅니다.
+                  <br>
+                  제11조 [결제방법]
+                  <br>
+                  에어부산 웹사이트에서 구매한 재화·용역에 대한 대금지급방법은 다음 각 호의 하나로 할 수 있습니다.
+                  ① 온라인 계좌이체
+                  ② 신용카드 결제
+                  ③ 기타 에어부산이 정한 결제방식
+                  <br>
+                  제12조 [수신확인통지·구매신청 변경 및 취소]
+                  <br>
+                  ① 에어부산은 이용자의 구매신청이 있는 경우 이용자에게 수신확인통지를 합니다.
+                  ② 수신확인통지를 받은 이용자는 의사표시의 불일치 등이 있는 경우에는 수신확인통지를 받은 후 즉시 구매신청 변경 및 취소를 요청할 수 있고, 에어부산은 그 요청에 따라 처리하여야
+                  합니다.
+                  <br>
+                  제3장 책임과 의무
+                  <br>
+                  제13조 [개인정보보호]
+                  <br>
+                  이용자의 개인정보 보호에 대한 상세한 내용은 에어부산 웹사이트 (www.airbusan.com)상의 개인정보처리방침에서 규정한 바에 따릅니다.
+                  <br>
+                  제14조 [에어부산의 의무]
+                  <br>
+                  ① 에어부산은 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고 안정적인 서비스 제공 및 재화·용역의 공급에 노력합니다.
+                  ② 에어부산은 이용자가 안전하게 서비스를 이용할 수 있도록 이용자의 개인정보(신용정보 포함)보호를 위한 보안 시스템을 갖추겠습니다.
+                  ③ 에어부산이 상품이나 용역에 관하여 「표시·광고의공정화에관한법률」 제3조 소정의 부당한 표시·광고행위를 함으로써 이용자가 손해를 입은 때에는 이를 배상할 책임을 집니다.
+                  ④ 에어부산은 이용자가 원하지 않는 영리목적의 광고성 전자우편을 발송하지 않습니다.
+                  <br>
+                  제15조 [회원의 I.D. 및 비밀번호에 대한 의무]
+                  <br>
+                  ① 제13조의 경우를 제외한 I.D.와 비밀번호에 대한 관리책임은 회원에게 있습니다.
+                  ② 회원은 제3자에게 자신의 I.D. 및 비밀번호를 이용하게 해서는 안됩니다.
+                  ③ 회원이 자신의 I.D. 및 비밀번호를 도용 당하거나 제3자가 사용하고 있음을 인지한 경우에는 즉시 에어부산에 통보하여 그 안내에 따라야 합니다.
+                  <br>
+                  제16조 [이용자의 의무]
+                  <br>
+                  이용자는 이 약관 및 관계법령을 준수하여야 하며, 다음의 행위를 해서는 안됩니다.
+                  1. 신청 또는 변경 시 허위내용의 기재
+                  2. 에어부산 웹사이트에 게시된 정보의 임의변경
+                  3. 에어부산이 허용하고 있지 않은 정보나 컴퓨터 프로그램 등을 무단으로 송신 또는 게시하는 행위
+                  4. 에어부산 기타 제3자의 저작권 등 지적재산권 침해
+                  5. 에어부산 기타 제3자의 명예, 프라이버시를 침해하거나 업무를 방해하는 행위
+                  6. 외설적 또는 폭력적 메시지·화상·음성 기타 공서양속에 반하는 정보를 송신, 공개 또는 게시하는 행위
+                  <br>
+                  제17조[에어부산 웹사이트와 연결 사이트 간의 관계]
+                  <br>
+                  에어부산 웹사이트와 연결 사이트가 하이퍼링크 (하이퍼 링크의 대상에는 문자, 그림 및 동화상 등이 포함) 방식으로 연결 된 경우, 에어부산은 연결 사이트가 독자적으로 제공하는
+                  재화·용역에 의하여 이용자와 행하는 거래에 대해서 보증책임을 지지 않습니다.
+                  <br>
+                  제18조[저작권의 귀속 및 이용제한]
+                  <br>
+                  ① 에어부산이 작성한 저작물에 대한 저작권 기타 지적재산권은 에어부산에 귀속합니다.
+                  ② 이용자는 에어부산 웹사이트를 이용함으로써 얻은 정보를 에어부산의 사전 승낙 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자로 하여금
+                  이용하게 해서는 안됩니다.
+                  <br>
+                  제19조[분쟁해결]
+                  <br>
+                  ① 에어부산은 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상처리하기 위하여 피해보상처리기구를 설치·운영합니다.
+                  ② 에어부산은 이용자가 제기하는 불만사항 및 의견을 신속·적정하게 처리합니다. 다만 신속한 처리가 곤란한 경우에는 이용자에게 그 사유와 처리일정을 지체 없이 통보해 드립니다.
+                  ③ 에어부산과 이용자간에 전자거래에 관한 분쟁 발생시 전자거래기본법 및 동법 시행령에 근거 하여 설치된 전자거래분쟁조정위원회의 조정에 따를 수 있습니다.
+                  <br>
+                  제20조[관할법원 및 준거법]
+                  <br>
+                  ① 에어부산과 이용자간에 발생한 전자거래 분쟁에 관한 소는 서울중앙지방법원에 제기합니다.
+                  ② 에어부산과 이용자간에 제기된 전자거래 소송에는 대한민국 법을 적용합니다.
+                  <br>
+                  부칙
+                  <br>
+                  제1조[약관의 효력]
+                  <br>
+                  이 약관은 2008년 10월 1일부터 시행하며, 이 약관이 개정되기 전에 가입한 회원에게도 적용됩니다.
+                  <br>
+                  제2조[약관의 개정]
+                  <br>
+                  에어부산은 대한민국의 약관의규제에관한법률, 전자거래기본법, 전자서명법, 개인정보보호법, 소비자기본법, 전자상거래등에서의소비자보호에관한법률 등 관련법규를 준수합니다. 따라서 에어부산의
+                  회원 약관은 대한민국 관련법규개정 및 정부지침의 변경으로 인하여 그 내용이 변경될 수 있습니다. 회원 약관 개정 시에는 개정일자, 개정이유, 개정내용 등을 인터넷 웹사이트에
+                  공시하겠습니다.
+                  <br>
+                  추가사항 : 회원탈퇴 및 자격상실 조건 추가 (v1.3)
+                  <br>
+                  회원으로 등록된 지역에 따라 혜택과 적용 규정이 다를 수 있습니다.
+                  <br>
+                  제16조
+                  <br>
+                  회원은 본인의 개인정보가 변경된 경우 에어부산에 수정을 요청하여야 하며, 주소 미등록, 부정확한 개인정보 혹은 우편물의 분실로 인해 에어부산으로부터 연락을 받지 못해 손해가 발생한
+                  경우, 에어부산은 이에 대해 책임을 지지 않습니다.
+                  <br>
+                  제17조
+                  <br>
+                  최근에 발행된 회원안내서 혹은 홈페이지에 등재된 내용이 이전의 모든 규정과 조건보다 우선합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="individual-checkbox">
+            <input type="checkbox">
+            <p class="individual-hidden-color">[필수]</p>
+            <p>개인정보 수집, 이용에 동의합니다.</p>
+          </div>
+          <div class="individual-view-btn">
+            <button id="personinfom">보기</button>
+            <div class="personinfom-box">
+              <div class="title-closebtn-box2">
+                <p>개인정보 이용자 동의</p>
+                <button><i class="fa-regular fa-circle-xmark"></i></button>
+              </div>
+              <div class="personinfom-let-box">
+                <p>1. 수집하는 개인정보의 항목</p> <br>
+                <p>가. 회원 가입 시</p>
+                <table>
+                  <colgroup>
+                    <col width="18%">
+                    <col width="18%">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="1" class="bdr">대구분</th>
+                      <th scope="col" colspan="1" class="bdr">소구분</th>
+                      <th scope="col" colspan="1" class="bdr">수집항목</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="bdr" rowspan="3">회원 가입</td>
+                      <td class="bdr">필수 정보</td>
+                      <td class="bdr">아이디(ID), 연계정보(CI),
+                        <br>성명(한글 및 영어), 이메일 주소, 연락처, 생년월일</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr">선택 정보</td>
+                      <td class="bdr">성별, 거주국가/지역, 국적(여권기준)</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr">만 14세 <br> 미만</td>
+                      <td class="bdr">보호자 성명(한글), 아이핀 인증/휴대폰 인증</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr" rowspan="2">기업체 <br> 회원 가입</td>
+                      <td class="bdr">필수</td>
+                      <td class="bdr">사업자 등록번호, 기업명칭, 업종, 기업소재지, 회사대표번호,<br> 대표자성명, 회사주소, 담당자 성명, 사무실 전화번호, 회사 FAX번호, 사업자등록증 사본</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr">선택</td>
+                      <td class="bdr">임직원 수</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr" rowspan="2">여행사 <br> 회원 가입</td>
+                      <td class="bdr">필수</td>
+                      <td class="bdr">사업자 등록번호, 여행사 명칭, 업종, 기업소재지, 회사대표번호, 대표자성명, 회사주소, 회사 FAX번호, 사업자등록증 사본</td>
+                    </tr>
+                    <tr>
+                      <td class="bdr">선택</td>
+                      <td class="bdr">임직원 수</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </li>
+        <li>
+          <div class="individual-checkbox">
+            <input type="checkbox">
+            <p class="individual-hidden-color">[선택]</p>
+            <p>제 3자 정보제공에 동의합니다.</p>
+          </div>
+          <div class="individual-view-btn">
+            <button id="provision">보기</button>
+          </div>
+        </li>
+        <li>
+          <div class="individual-checkbox">
+            <input type="checkbox">
+            <p class="individual-hidden-color">[선택]</p>
+            <p>마케팅 및 광고 활용에 동의합니다.</p>
+          </div>
+          <div class="individual-view-btn">
+            <button id="advertisement">보기</button>
+          </div>
+        </li>
+      </ul>
+      <div class="individual-btn-box">
+        <button class="individual-next">다음</button>
+        <button class="individual-cancel">취소</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="business-hidden-box">
+    <div class="business-hidden-layout">
+      <h2>기업우대 임직원 가입/신규 기업체 가입</h2>
+      <ul class="business-hidden-list">
+        <li>
+          <a href="#">
+            <div class="txt-box">
+              <h3>기업우대 <br> 임직원 가입</h3>
+              <p>기업명과 기업코드를 <br> 입력해주세요.</p>
+            </div>
+            <i class="fa-solid fa-building"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt-box">
+              <h3>신규 <br> 기업체 가입</h3>
+              <p>1인이상 사업장 <br> 기업등록 무료</p>
+            </div>
+            <i class="fa-solid fa-briefcase"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="travel-hidden-box">
+    <div class="travel-hidden-layout">
+      <h2>여행사우대 발권 담당자 가입/신규 여행사 가입</h2>
+      <ul class="travel-hidden-list">
+        <li>
+          <a href="#">
+            <div class="txt-box">
+              <h3>여행사우대 <br> 발권담당자 가입</h3>
+              <p>여행사명과 여행사코드를 <br> 입력해주세요.</p>
+            </div>
+            <i class="fa-solid fa-plane-departure"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt-box">
+              <h3>신규 <br>여행사 가입</h3>
+              <p>1인이상 사업장 <br> 여행사 등록 무료</p>
+            </div>
+            <i class="fa-solid fa-plane-arrival"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="posiht"></div>
+  <div class="bottom-nav">
+    <div class="bottom-nav-layout">
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">규정 및 약관</a></li>
+        <li><a href="#">기타</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-layout">
+      <ul>
+        <li>
+          <h2>에어부산(주)</h2>
+          <ul>
+            <li>대표이사 두성국</li>
+            <li>부산광역시 강서구 유동단지 1로 <br>
+              57번가길 6(대저2동) 우:46721
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>사업자등록번호 : 605-81-84518 <br>
+              통신판매업 신고번호 : 제 2021-부산강서구-0203호
+            </li>
+            <li><b>제휴, 광고 등 다양한 제안을 기다립니다</b></li>
+            <li>&copy; Copyright 2024 BY AIR BUSAN CO. LTD. All Rights reserved</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li class="footer-style-color">예약센터</li>
+            <li>1666-3060</li>
+            <li class="footer-style-color">마게팅/광고 문의</li>
+            <li>flynfun@airbusan.com</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
